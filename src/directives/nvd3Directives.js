@@ -587,6 +587,7 @@
                     data: '=',
                     filtername: '=',
                     filtervalue: '=',
+                    groupspacing: '@',
                     width: '@',
                     height: '@',
                     id: '@',
@@ -697,6 +698,7 @@
                                         .x(attrs.x === undefined ? function(d){ return d[0]; } : scope.x())
                                         .y(attrs.y === undefined ? function(d){ return d[1]; } : scope.y())
                                         .forceY(attrs.forcey === undefined ? [0] : scope.$eval(attrs.forcey)) // List of numbers to Force into the Y scale
+                                        .groupSpacing(attrs.groupspacing === undefined ? 1: attrs.groupspacing )
                                         .showLegend(attrs.showlegend === undefined ? false : (attrs.showlegend === 'true'))
                                         .showControls(attrs.showcontrols === undefined ? false : (attrs.showcontrols === 'true'))
                                         .showXAxis(attrs.showxaxis === undefined ? false : (attrs.showxaxis  === 'true'))
